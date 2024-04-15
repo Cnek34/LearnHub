@@ -1,0 +1,55 @@
+body {
+    font-family: "Roboto", serif;
+    font-size: 24px;
+    line-height: 24px;
+    background-image: url("../img/background.jpg");
+    background-size: 1920px 1080px;
+}
+
+header{
+    background-color: #fdfdff;
+}
+
+main {
+    color: #fdfdff;
+}
+
+.logo {
+    font-size: 30px;
+    text-decoration: none;
+    color: #0F1839;
+}
+
+h1 {
+    font-size: 44px;
+    line-height: 60px;
+    font-style: italic;
+}
+
+.search, .profile {
+    background-color: #0F1839;
+}
+
+h3 {
+    text-decoration: underline;
+    text-decoration-color: #FFFFFF;
+    text-underline-position: under;
+}
+
+.site-navigation-item a {
+    font-size: 25px;
+    line-height: 18px;
+    color: #0F1839;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #3A3A3A;
+}
+
+.down-logo {
+    font-size: 30px;
+    text-decoration: none;
+    color: #6F6F6F;
+}
