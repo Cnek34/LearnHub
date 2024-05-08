@@ -2,46 +2,91 @@ body {
     font-family: "Roboto", serif;
     font-size: 24px;
     line-height: 24px;
-    background-image: url("../img/background.jpg");
-    background-size: 1920px 1080px;
+    background-attachment: fixed;
+    margin: 0;
 }
 
-header{
-    background-color: #fdfdff;
+.main-header {
+    background: #fdfdff;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+
+    width: 90vw;
+    padding: 0 90px;
+    margin-bottom: 15px;
 }
 
-main {
-    color: #fdfdff;
+.main-nav{
+    display: flex;
 }
 
 .logo {
+    margin-right: auto;
+}
+
+.logo h1{
     font-size: 30px;
-    text-decoration: none;
     color: #0F1839;
 }
 
-h1 {
+.site-navigation {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 220px;
+}
+
+.site-navigation-item a {
+    font-size: 20px;
+    line-height: 18px;
+    color: #0F1839;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.search {
+    width: 49px;
+}
+  
+.search {
+    margin-left: 120px;
+}
+
+.main-content {
+    /*background-image: url("../img/background.jpg");*/
+    background: #50f199;
+    color: #000000;
+    margin-top: 74px;
+    padding-top: 40px;
+}
+
+.hero {
+    width: 1680px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    display: flex;
+}
+
+.hero h1 {
     font-size: 44px;
     line-height: 60px;
     font-style: italic;
 }
 
-.search, .profile {
+.hero-img {
+    width: 304px;
+}
+
+.card {
     background-color: #0F1839;
+    width: 130px;
 }
 
 h3 {
     text-decoration: underline;
-    text-decoration-color: #FFFFFF;
+    text-decoration-color: #000000;
     text-underline-position: under;
-}
-
-.site-navigation-item a {
-    font-size: 25px;
-    line-height: 18px;
-    color: #0F1839;
-    text-transform: uppercase;
-    text-decoration: none;
 }
 
 footer {
