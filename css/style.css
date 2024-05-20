@@ -55,7 +55,7 @@ body {
 }
 
 .main-content {
-    background-image: url("../img/background.jpg");
+    /*background-image: url("../img/background.jpg");*/
     /*background: #50f199;*/
     color: #000000;
     margin-top: 74px;
