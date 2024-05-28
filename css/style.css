@@ -1,9 +1,10 @@
 body {
-    font-family: "Roboto", serif;
+    font-family: "Comfortaa";
     font-size: 24px;
     line-height: 24px;
     background-attachment: fixed;
     margin: 0;
+    background-image: url("../img/background.jpg");
 }
 
 .main-header {
@@ -67,8 +68,6 @@ body {
     width: 1480px;
     margin: 0 auto;
     margin-bottom: 40px;
-    display: flex;
-    justify-content: space-between;
 }
 
 .hero h1 {
@@ -104,6 +103,7 @@ body {
     margin: 0;
     padding: 30px;
     list-style: none;
+    border-radius: 40px;
 }
 
 h3 {
