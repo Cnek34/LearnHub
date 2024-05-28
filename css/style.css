@@ -35,7 +35,6 @@ body {
     padding: 0;
     margin: auto 0;
     list-style: none;
-    width: 220px;
 }
 
 .site-navigation-item a {
@@ -111,6 +110,16 @@ h3 {
     text-decoration-color: #ffffff;
     text-underline-position: under;
     text-align: center;
+}
+
+.information {
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+
+    margin: 0 30px;
+    padding: 30px;
+    border-radius: 40px;
 }
 
 .main-footer {
