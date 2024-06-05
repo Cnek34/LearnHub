@@ -21,7 +21,8 @@ button.onclick = function () {
     // Создаем HTML для новой карточки
     let cardItem = `
         <div class="new-user">
-            <p class="name-user">${arrayObject[0]}</p>
+            <p class="name-user">${'Name'}</p>
+            <p>${arrayObject[0]}</p>
             <p class="about-me-user">${arrayObject[1]}</p>
             <p class="contacts-user">${arrayObject[2]}</p>
         </div>
