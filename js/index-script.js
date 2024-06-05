@@ -3,29 +3,36 @@ let aboutMe = document.querySelector('.about-me');
 let contacts = document.querySelector('.contacts');
 let button = document.querySelector('.btn');
 
-const arrayObject = [];
-
 button.onclick = function () {
-    let arr = [];
-    arr.push(role.value, aboutMe.value, contacts.value);
-    arrayObject.push(arr);
-    console.log(arrayObject);
+    // Получаем значения полей
+    let roleValue = role.value.trim();
+    let aboutMeValue = aboutMe.value.trim();
+    let contactsValue = contacts.value.trim();
 
-    let cardItem = ''
+    // Проверяем, чтобы все поля были заполнены
+    if (roleValue === '' || aboutMeValue === '' || contactsValue === '') {
+        alert('Пожалуйста, заполните все поля.');
+        return;
+    }
 
-    let out = document.getElementById('out')
-    arrayObject.forEach ((menu) => {
-        cardItem +=
-        `
+    // Создаем массив для хранения информации о пользователе
+    let arrayObject = [roleValue, aboutMeValue, contactsValue];
 
+    // Создаем HTML для новой карточки
+    let cardItem = `
         <div class="new-user">
-        <p class="name-user">${'Name'}</p>
-        <p>${menu[1]}</p>
-        <p class="about-me-user">${menu[2]}</p>
-        <p>${menu[3]}</p>
+            <p class="name-user">${arrayObject[0]}</p>
+            <p class="about-me-user">${arrayObject[1]}</p>
+            <p class="contacts-user">${arrayObject[2]}</p>
         </div>
+    `;
 
-        `
-    })
+    // Получаем контейнер для вывода и вставляем новую карточку
+    let out = document.getElementById('out');
     out.insertAdjacentHTML('beforeend', cardItem);
-}
+
+    // Очищаем поля ввода после добавления карточки
+    role.value = '';
+    aboutMe.value = '';
+    contacts.value = '';
+};
