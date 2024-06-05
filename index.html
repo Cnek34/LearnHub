@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
     <title>LearnHub</title>
 </head>
 <body>
@@ -58,17 +59,33 @@
         <section class="finding-partner">
             <div class="addendum">
                 <h2>Добавьте свое резюме</h2>
-                <ul class="addendum-list">
-                    <li class="input-box"><p>Ваша роль в команде:</p><input type="text" id="role"/></li>
-                    <li class="input-box"><p>Расскажите о себе:</p><input type="text" id="about-me"/></li>
-                    <li class="input-box"><p>Контакты чтобы связаться:</p><input type="text" id="contacts"/></li>
-                </ul>
-                <div style="text-align:center">
-                    <button class="btn">Отправить</button>
-                </div>
+                <form action="">
+                    <ul class="addendum-list">
+                        <li class="input-box"><p>Ваша роль в команде:</p><input type="text" class="role" required></li>
+                        <li class="input-box"><p>Расскажите о себе:</p><input type="text" class="about-me" required></li>
+                        <li class="input-box"><p>Контакты чтобы связаться:</p><input type="text" class="contacts" required></li>
+                    </ul>
+                    <div style="text-align:center">
+                        <button class="btn">Отправить</button>
+                    </div>
+                </form>
             </div>
-            <div class="list">
-                <p>Скоро будут новые пользователи...</p>
+            <div class="list" id = "out">
+                <h2>Поиск напарников</h2>
+                <div class="new-user">
+                    <p class="name-user">Маша</p>
+                    <p>Дизайнер</p>
+                    <p class="about-me-user">Да, стоит. Однако нужно понимать, что отсутствие практического опыта — это в первую очередь риск для студии. 
+                        Сотрудникам придется потратить время, чтобы научить вас, и надеяться, что в итоге вы справитесь. Соответственно, 
+                        вам вряд ли предложат позицию выше начальной и скорее всего на собеседовании будут смотреть на то, как быстро вы 
+                        способны обучаться и осваивать новые задачи.
+
+                        Сейчас в игровых студиях часто нужны дополнительные руки для выполнения мелких задач. Это отличная точка входа, 
+                        поэтому вам не стоит упускать возможность. При этом никогда не стоит опускать руки при отказах. Надо брать количеством, 
+                        рассылая резюме пачками и внимательно слушая фидбек при отказе — там может быть указано, что прокачать или поправить.</p>
+                    <p>account.mail.ru</p>
+                </div>
+
             </div>
         </section>
     </main>
@@ -90,5 +107,6 @@
             </ul>
         </div>
     </footer>
+<script src="js/index-script.js"></script>
 </body>
 </html>
