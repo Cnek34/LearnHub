@@ -55,14 +55,13 @@ body {
 }
 
 .main-content {
-    /*background-image: url("../img/background.jpg");*/
-    /*background: #50f199;*/
     color: #000000;
     margin-top: 74px;
     padding-top: 40px;
     padding-bottom: 90px;
 }
 
+/* Блок information */
 .hero {
     width: 1480px;
     margin: 0 auto;
@@ -120,8 +119,99 @@ h3 {
     margin: 0 30px;
     padding: 30px;
     border-radius: 40px;
+    margin-bottom: 20px;
 }
 
+/* Блок finding-partner */
+.finding-partner {
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+
+    padding: 0;
+    margin: 0 30px;
+    border-radius: 40px;
+}
+
+.addendum {
+    background: rgba(88, 247, 207, 0.7);
+    border: 2px solid rgba(88, 247, 207, 0.2);
+
+    margin: 0;
+    padding: 30px;
+    border-radius: 40px 40px 0 0;
+}
+
+.addendum h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.addendum ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-left: 40px;
+}
+
+.addendum .btn{
+    width: 200px;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.addendum .btn:active{
+    background: #000000;
+    color: #ffffff;
+}
+
+.addendum-list li {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.addendum-list p {
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    margin: auto 0;
+}
+
+.addendum .input-box{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    position: relative;
+}
+
+.input-box input{
+    width: 100%;
+    background: #fff;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #000000;
+    padding: 20px 45px 20px 20px;
+}
+
+.list p {
+    text-align: center;
+}
+
+/* Блок footer */
 .main-footer {
     background-color: #3A3A3A;
     padding: 30px 90px;
