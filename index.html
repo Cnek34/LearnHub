@@ -47,7 +47,17 @@
                 <h2>Добавьте свое резюме</h2>
                 <form action="">
                     <ul class="addendum-list">
-                        <li class="input-box"><p>Ваша роль в команде:</p><input type="text" class="role" required></li>
+                        <li class="input-box-filter">
+                            <p>Ваша роль в команде:</p>
+                            <select class="input-filter" name="role-filter">
+                                <option value="leader">Тимлид</option>
+                                <option value="designer">Дизайнер</option>
+                                <option value="developer">Разработчик</option>
+                                <option value="gameDesigner">Геймдизайнер</option>
+                                <option value="analyst">Аналитик</option>
+                                <option value="all" selected>Все роли</option>
+                            </select>
+                        </li>
                         <li class="input-box"><p>Расскажите о себе:</p><input type="text" class="about-me" required></li>
                         <li class="input-box"><p>Контакты чтобы связаться:</p><input type="text" class="contacts" required></li>
                     </ul>
@@ -58,7 +68,15 @@
             </div>
             <div class="list" id = "out">
                 <h2>Поиск напарников</h2>
-                <div class="new-user">
+                <select class="filter" name="role-filter">
+                    <option value="leader">Тимлид</option>
+                    <option value="designer">Дизайнер</option>
+                    <option value="developer">Разработчик</option>
+                    <option value="gameDesigner">Геймдизайнер</option>
+                    <option value="analyst">Аналитик</option>
+                    <option value="all" selected>Все роли</option>
+                </select>
+                <div class="new-user" data-category="designer">
                     <p class="name-user">Маша</p>
                     <p>Дизайнер</p>
                     <p class="about-me-user">Активно участвует в студенческих проектах. Работала в команде над проектом редизайна 

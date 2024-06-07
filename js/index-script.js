@@ -1,26 +1,31 @@
-let role = document.querySelector('.role');
+let role = document.querySelector('.input-filter');
 let aboutMe = document.querySelector('.about-me');
 let contacts = document.querySelector('.contacts');
 let button = document.querySelector('.btn');
 
 button.onclick = function () {
     // Получаем значения полей
-    let roleValue = role.value.trim();
+    let roleValue = role.value;
     let aboutMeValue = aboutMe.value.trim();
     let contactsValue = contacts.value.trim();
 
     // Проверяем, чтобы все поля были заполнены
-    if (roleValue === '' || aboutMeValue === '' || contactsValue === '') {
+    if (aboutMeValue === '' || contactsValue === '') {
         alert('Пожалуйста, заполните все поля.');
         return;
     }
 
+    if (roleValue === 'all') {
+        alert('Выберите роль.');
+        return;
+    }
+
     // Создаем массив для хранения информации о пользователе
-    let arrayObject = [roleValue, aboutMeValue, contactsValue];
+    let arrayObject = [role.options[role.selectedIndex].textContent, aboutMeValue, contactsValue];
 
     // Создаем HTML для новой карточки
     let cardItem = `
-        <div class="new-user">
+        <div class="new-user" data-category="${roleValue}">
             <p class="name-user">${'Name'}</p>
             <p>${arrayObject[0]}</p>
             <p class="about-me-user">${arrayObject[1]}</p>
@@ -32,13 +37,15 @@ button.onclick = function () {
     let out = document.getElementById('out');
     out.insertAdjacentHTML('beforeend', cardItem);
 
+    console.log(document.querySelectorAll('.new-user'));
+
     // Очищаем поля ввода после добавления карточки
-    role.value = '';
+    role.value = 'all';
     aboutMe.value = '';
     contacts.value = '';
 };
 
-
+/*Плавный скролл*/
 function slowScroll(id) {
     var offset = 90;
     $('html, body').animate({
@@ -46,3 +53,19 @@ function slowScroll(id) {
     }, 1000);
     return false;
 }
+
+
+/*Фильтер*/
+let filter = document.querySelector('.filter');
+
+filter.onchange = function () {
+    let articles = document.querySelectorAll('.new-user');
+  for (let article of articles) {
+    if (article.dataset.category !== filter.value && filter.value !== 'all') {
+      article.classList.add('hidden');
+    } else {
+        article.classList.remove('hidden');
+    }
+  }
+};
+  
