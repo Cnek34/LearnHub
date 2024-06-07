@@ -37,3 +37,12 @@ button.onclick = function () {
     aboutMe.value = '';
     contacts.value = '';
 };
+
+
+function slowScroll(id) {
+    var offset = 90;
+    $('html, body').animate({
+        scrollTop: $(id).offset().top - offset
+    }, 1000);
+    return false;
+}
