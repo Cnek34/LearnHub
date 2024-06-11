@@ -1,3 +1,20 @@
+/*Имя пользователя*/
+let userName = localStorage.getItem('userName');
+
+window.onload = function () {
+    if (userName != null) {
+        let cardItem1 = `
+            <li class="site-navigation-name">
+                <a>${userName}</a>
+            </li>
+        `;
+
+        let out1 = document.getElementById('navigation-out');
+        out1.insertAdjacentHTML('beforeend', cardItem1);
+    }
+}
+
+/*Добавление нового пользователя*/
 let role = document.querySelector('.input-filter');
 let aboutMe = document.querySelector('.about-me');
 let contacts = document.querySelector('.contacts');
@@ -8,6 +25,7 @@ button.onclick = function () {
     let roleValue = role.value;
     let aboutMeValue = aboutMe.value.trim();
     let contactsValue = contacts.value.trim();
+    console.log(roleValue);
 
     // Проверяем, чтобы все поля были заполнены
     if (aboutMeValue === '' || contactsValue === '') {
@@ -26,7 +44,7 @@ button.onclick = function () {
     // Создаем HTML для новой карточки
     let cardItem = `
         <div class="new-user" data-category="${roleValue}">
-            <p class="name-user">${'Name'}</p>
+            <p class="name-user">${userName}</p>
             <p>${arrayObject[0]}</p>
             <p class="about-me-user">${arrayObject[1]}</p>
             <p class="contacts-user">${arrayObject[2]}</p>
@@ -68,4 +86,3 @@ filter.onchange = function () {
     }
   }
 };
-  

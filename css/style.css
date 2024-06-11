@@ -38,6 +38,9 @@ body {
     padding: 0;
     margin: auto 0;
     list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .site-navigation-item a {
@@ -54,6 +57,13 @@ body {
 
 .site-navigation-item a:active {
     opacity: 0.3;
+}
+
+.site-navigation-name a {
+    margin-left: 45px;
+    font-size: 20px;
+    line-height: 18px;
+    color: #0F1839;
 }
   
 .search {
@@ -162,7 +172,7 @@ body {
     list-style: none;
 }
 
-.addendum .btn{
+.addendum .btn {
     width: 200px;
     height: 45px;
     background: #fff;
