@@ -38,6 +38,11 @@ button.onclick = function () {
         return;
     }
 
+    if (userName === null) {
+        alert('Для начала давай зарегистрируемся.');
+        return;
+    }
+
     // Создаем массив для хранения информации о пользователе
     let arrayObject = [role.options[role.selectedIndex].textContent, aboutMeValue, contactsValue];
 
