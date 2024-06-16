@@ -353,11 +353,12 @@ body {
 }
 
 .social-list {
+    margin: auto 0;
     display: flex;
     justify-content: space-between;
     list-style: none;
 }
 
 .social-list-item {
-    margin-left: 20px;
+    margin-left: 40px;
 }
